@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"password"
+			],
+			[
+				"pas",
+				"password_2"
+			],
+			[
+				"st",
+				"strong	Tag"
+			],
+			[
+				"f",
+				"form	Tag"
+			],
+			[
+				"for",
+				"for	for …"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 110,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/ospanel/domains/aut/db.php",
+			"settings":
+			{
+				"buffer_size": 99,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "login.php",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\nrequire \"db.php\";\n\n\n$data =$_Post;\n$errors=array();\necho \"werwer\";\nif (isset($data['do_signup'])) \n		{ \necho \"string\";\n		echo $_Post['login'];\n		$errors=array();\n		\nif(trim($data['login']==''))\n{\n$errors[]='Введите логин';\n	}\n\n\nif(trim($data['email']==''))\n{\n$errors[]='Введите e-mail';\n	}\n\n\n	if($data['password']=='')\n{\n$errors[]='Введите пароль';\n	}\n\n\nif($data['password_2'] !=$data['password'])\n{\n	$errors[]='Повторный пароль введен неверно';\n}\n\n\n	\nif(empty($errors))\n{\n//регаем\necho '1';\n} else {\n	echo \"2\";\n}\n\n}\n?>\n\n<form action = \"/signup.php\" method=\"POST\">\n\n<p>\n<p><strong>Ваш логин</strong>:</p>\n<input type=\"text\" name=\"login\">\n</p>\n\n<p>\n<p><strong>Ваш e-mail</strong>:</p>\n<input type=\"email\" name=\"login\">\n</p>\n\n<p>\n<p><strong>Ваш пароль</strong>:</p>\n<input type=\"password\" name=\"password\">\n</p>\n\n<p>\n<p><strong>Повторите пароль</strong>:</p>\n<input type=\"password\" name=\"password_2\">\n</p>\n\n<p>\n	<button type=\"submit\" name=\"do_signup\"> Зарегистрироваться</button>\n\n</p>\n</form>\n",
+			"file": "signup.php",
+			"file_size": 1190,
+			"file_write_time": 131574096149021148,
+			"settings":
+			{
+				"buffer_size": 997,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 334.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git:",
+				"Git: Add All"
+			],
+			[
+				"git",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 674.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/ospanel/domains/aut/libs/rb.php",
+		"/C/ospanel/domains/aut/includes/db.php",
+		"/C/ospanel/progs/_Office/Sublime_text/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/User/Desktop/ыыыы/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/User/Desktop/ss",
+		"/C/Users/User/Desktop/ыыыы/Data/Packages/Emmet/Emmet.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">",
+			"check"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/ospanel/domains/aut/db.php",
+					"settings":
+					{
+						"buffer_size": 99,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "login.php",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "signup.php",
+					"settings":
+					{
+						"buffer_size": 997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								997,
+								997
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1444.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 202.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
