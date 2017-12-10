@@ -2,9 +2,9 @@
 require "db.php";
 
 
-$data =$_Post;
+$data =$_POST;
 $errors=array();
-echo "werwer";
+
 if (isset($data['do_signup'])) 
 		{ 
 echo "string";
@@ -42,6 +42,7 @@ if(empty($errors))
 echo '1';
 } else {
 	echo "2";
+	var_dump($errors);
 }
 
 }
@@ -56,7 +57,7 @@ echo '1';
 
 <p>
 <p><strong>Ваш e-mail</strong>:</p>
-<input type="email" name="login">
+<input type="email" name="email">
 </p>
 
 <p>
