@@ -31,12 +31,24 @@ $errors[]='Введите пароль';
 	$errors[]='Повторный пароль введен неверно';
 }
 
-
+if (R::count('users',"login=?", array($data['login']))>0)
+{
+	$errors[]='Логин занят';
+}
+	if (R::count('users',"email=?", array($data['email']))>0)
+	{
+		$errors[]='email занят';
+	}
 	
 	if(empty($errors))
 		{
 //регаем
-echo '1';
+		$user=R::dispense('users');
+		$user->login = $data['login'];
+		$user->email = $data['email'];
+		$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+		R::store($user);
+		echo '<div style="color:green;">'.'Зарегился!'.'</div><hr>';
 		} else
 		{
 	echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
