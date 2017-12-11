@@ -4,13 +4,30 @@ $data =$_POST;
 
 if (isset($data['do_login'])) {
     $errors = array();
-    $user = R::find('users', 'login = ?', array($data['login']));
+    $user = R::findOne('users', 'login = ?', array($data['login']));
     if ($user) {
+// если логин существует проверяем пароль
+    if ( password_verify($data['password'], $user->password))
+        {
+            $_SESSION['logged_user'] = $user;
+            echo '<div style="color:green;">'.'Зайдено! го то зе <a href = "/">майн паге</a>'.'</div><hr>';
 
+        }
+        else{
+            $errors[] = 'неверный пароль';
+        }
     } else {
         $errors[] = 'неверный логин';
 
     }
+
+    if(! empty($errors))
+    {
+        echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
+        var_dump($errors);
+
+    }
+
      }
 
 ?>
