@@ -1,26 +1,23 @@
 <?php
 require "db.php";
-
-
 $data =$_POST;
 $errors=array();
-
-if (isset($data['do_signup'])) 
-		{ 
+if (isset($data['do_signup']))
+{
 echo "string";
 		echo $_Post['login'];
 		$errors=array();
 		
-if(trim($data['login']==''))
-{
+	if(trim($data['login']==''))
+		{
 $errors[]='Введите логин';
-	}
+		}
 
 
-if(trim($data['email']==''))
-{
+	if(trim($data['email']==''))
+		{
 $errors[]='Введите e-mail';
-	}
+		}
 
 
 	if($data['password']=='')
@@ -29,23 +26,24 @@ $errors[]='Введите пароль';
 	}
 
 
-if($data['password_2'] !=$data['password'])
+	if($data['password_2'] !=$data['password'])
 {
 	$errors[]='Повторный пароль введен неверно';
 }
 
 
 	
-if(empty($errors))
-{
+	if(empty($errors))
+		{
 //регаем
 echo '1';
-} else {
-	echo "2";
+		} else
+		{
+	echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
 	var_dump($errors);
-}
+		}
 
-}
+		}
 ?>
 
 <form action = "/signup.php" method="POST">
