@@ -50,22 +50,22 @@ echo '1';
 
 <p>
 <p><strong>Ваш логин</strong>:</p>
-<input type="text" name="login">
+<input type="text" name="login" value="<?php echo @$data['login'] ?>" >
 </p>
 
 <p>
 <p><strong>Ваш e-mail</strong>:</p>
-<input type="email" name="email">
+<input type="email" name="email" value="<?php echo @$data['email'] ?>">
 </p>
 
 <p>
 <p><strong>Ваш пароль</strong>:</p>
-<input type="password" name="password">
+<input type="password" name="password" value="<?php echo @$data['password'] ?>">
 </p>
 
 <p>
 <p><strong>Повторите пароль</strong>:</p>
-<input type="password" name="password_2">
+<input type="password" name="password_2" value="<?php echo @$data['password_2'] ?>">
 </p>
 
 <p>
