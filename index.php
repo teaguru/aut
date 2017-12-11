@@ -11,5 +11,6 @@ require "db.php";
 
 <?php else : ?>
 <a href ="/login.php">Авторизация!!!</a><br>
-<a href ="/signup.php">Регистрация</a>
+<a href ="/signup.php">Регистрация</a><br>
+    Вы не авторизованы!
 <?php endif; ?>
