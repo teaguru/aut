@@ -1,12 +1,12 @@
 <?php
 require "db.php";
-$data =$_POST;
-$errors=array();
+$data = $_POST;
+$errors = array();
 if (isset($data['do_signup']))
 {
 echo "string";
 		echo $_Post['login'];
-		$errors=array();
+		$errors = array();
 		
 	if(trim($data['login']==''))
 		{
