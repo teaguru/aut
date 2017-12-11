@@ -4,7 +4,7 @@ $data = $_POST;
 $errors = array();
 if (isset($data['do_signup']))
 {
-echo "string";
+
 		echo $_Post['login'];
 		$errors = array();
 		
@@ -48,7 +48,9 @@ if (R::count('users',"login=?", array($data['login']))>0)
 		$user->email = $data['email'];
 		$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 		R::store($user);
-		echo '<div style="color:green;">'.'Зарегился!'.'</div><hr>';
+
+		echo '<div style="color:green;">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = "/">  Главную</a></div><hr>';
+
 		} else
 		{
 	echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
