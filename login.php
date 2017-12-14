@@ -1,5 +1,6 @@
 <?php
 require "db.php";
+require "libs.php";
 $data =$_POST;
 
 if (isset($data['do_login'])) {
@@ -44,6 +45,6 @@ if (isset($data['do_login'])) {
     </p>
 
     <p>
-        <button type="submit" name="do_login">Войти</button>
+        <button class="btn btn-warning-outline" type="submit" name="do_login">Войти</button>
 
     </p>

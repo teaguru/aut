@@ -1,5 +1,7 @@
 <?php
-require "db.php";
+require "db.php";?>
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"></head>
+<?php
 $data = $_POST;
 $errors = array();
 if (isset($data['do_signup']))
@@ -60,7 +62,7 @@ if (R::count('users',"login=?", array($data['login']))>0)
 		}
 ?>
 
-<form action = "/signup.php" method="POST">
+<form action = "/signup.php"  class="container-fluid" class="m1" method="POST">
 
 <p>
 <p><strong>Ваш логин</strong>:</p>
@@ -83,7 +85,7 @@ if (R::count('users',"login=?", array($data['login']))>0)
 </p>
 
 <p>
-	<button type="submit" name="do_signup"> Зарегистрироваться</button>
+	<button class="btn btn-info" type="submit" name="do_signup"> Зарегистрироваться</button>
 
 </p>
 </form>
