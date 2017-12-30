@@ -11,6 +11,7 @@ if (isset($data['do_add']))
 	
 		
 $errors[]='Введите текст мнения';
+// УДАЧНЫЙ ПУШ 30.12.17 2
 		
 
 
@@ -31,9 +32,8 @@ if (R::count('post',"mnenie=?", array($data['errors']))>0)
 		//$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 		R::store($user);
 
-		echo '<div style="color:green;">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = "/">  Главную</a></div><hr>'; /*
+		echo '<div style="color:green;">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = "/">  Главную страницу</a></div><hr>'; /*
 }
-		 else
 		{
 	echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
 	var_dump($errors);
