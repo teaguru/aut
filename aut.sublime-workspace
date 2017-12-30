@@ -55,7 +55,7 @@
 			"file": "add.php",
 			"settings":
 			{
-				"buffer_size": 1098,
+				"buffer_size": 1130,
 				"line_ending": "Windows"
 			}
 		},
@@ -103,9 +103,45 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 127.0,
 		"selected_items":
 		[
+			[
+				"git:q",
+				"Git: Quick Commit (repo, only already added files)"
+			],
+			[
+				"git:a",
+				"Git: Add All"
+			],
+			[
+				"git:",
+				"Git: Log All"
+			],
+			[
+				"git:pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"git:gu",
+				"Git: Gui"
+			],
+			[
+				"git: pu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git",
+				"Git: Fetch"
+			],
+			[
+				"git:gui",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git:p",
+				"Git: Push"
+			],
 			[
 				"git:push",
 				"Git: Push Current Branch"
@@ -123,24 +159,8 @@
 				"Git: Pull Using Rebase"
 			],
 			[
-				"git:pus",
-				"Git: Push Current Branch"
-			],
-			[
 				"git:br",
 				"Git: Push Current Branch"
-			],
-			[
-				"git",
-				"Git: Push"
-			],
-			[
-				"git:p",
-				"Git: Push Tags"
-			],
-			[
-				"git:",
-				"Git: Commit"
 			],
 			[
 				"git:c",
@@ -183,7 +203,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 464.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -248,7 +268,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -263,8 +283,8 @@
 						"selection":
 						[
 							[
-								762,
-								762
+								244,
+								213
 							]
 						],
 						"settings":
@@ -478,15 +498,15 @@
 					"file": "add.php",
 					"settings":
 					{
-						"buffer_size": 1098,
+						"buffer_size": 1130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								272,
-								272
+								1128,
+								1128
 							]
 						],
 						"settings":
@@ -543,7 +563,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 168.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -618,7 +638,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1764.0,
+						"translation.y": 1176.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
