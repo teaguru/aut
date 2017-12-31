@@ -5,43 +5,40 @@ $errors = array();
 if (isset($data['do_add']))
 {
 
-		echo $_Post['login'];
+		echo 'Вы зашли как '.$_SESSION['logged_user']->login;
 		$errors = array();
 		
-	if(trim($data['mnenie']==''))
-		{
-$errors[]='Введите текст мнения';
-		}
-
-
 	
+		
+$errors[]='Введите текст мнения';
+// УДАЧНЫЙ ПУШ 30.12.17 2! пусть меня боится !!! КАНАЛЬЯ! Тысяча чертей!
+		
 
-if (R::count('users',"login=?", array($data['login']))>0)
+
+	/*
+
+if (R::count('post',"mnenie=?", array($data['errors']))>0)
 {
-	$errors[]='Логин занят';
+	$errors[]='Такое уже было';
 }
-	if (R::count('users',"email=?", array($data['email']))>0)
-	{
-		$errors[]='email занят';
-	}
+	
 	
 	if(empty($errors))
-		{
-//регаем
-		$user=R::dispense('users');
-		$user->login = $data['login'];
-		$user->email = $data['email'];
-		$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+		 {
+//регаем*/
+		$user=R::dispense('post');
+		$user->login = $_SESSION['logged_user']->login;
+		$user->mnenie = $data['mnenie'];
+		//$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 		R::store($user);
 
-		echo '<div style="color:green;">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = "/">  Главную</a></div><hr>';
-
-		} else
+		echo '<div style="color:green;">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = "/">  Главную страницу</a></div><hr>'; /*
+}
 		{
 	echo '<div style="color:red;">'.array_shift($errors).'</div><hr>';
 	var_dump($errors);
 		}
-
+*/
 		}
 ?>
 
