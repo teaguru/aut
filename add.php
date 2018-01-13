@@ -55,5 +55,5 @@ if (R::count('post',"mnenie=?", array($data['errors']))>0)
 
 </p>
 </form>
-
+<a href = "index.php"> Главная </a><br>
 

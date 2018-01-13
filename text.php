@@ -8,7 +8,7 @@ $data =$_POST;
 <?php
 $query = R::findAll('post');
     // а можно и так  $query = R::getAll( 'SELECT * FROM jobs' ); 
-    echo($query); ?>
+   // echo($query); ?>
 
 <table border="1" align="center">
     <tr>
@@ -33,3 +33,4 @@ $query = R::findAll('post');
 <?php
             endforeach;
         ?>
+    <a href = "index.php"> Главная </a><br>
