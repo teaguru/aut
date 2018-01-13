@@ -52,10 +52,13 @@
 			}
 		},
 		{
+			"contents": "<?php\nrequire \"db.php\";\n$data =$_POST;\n$errors = array();\nif (isset($data['do_add']))\n{\n\n		echo 'Вы зашли как '.$_SESSION['logged_user']->login;\n		$errors = array();\n		\n	\n		\n$errors[]='Введите текст мнения';\n// УДАЧНЫЙ ПУШ 30.12.17 2! пусть меня боится !!! КАНАЛЬЯ! Тысяча чертей!\n		\n\n\n	/*\n\nif (R::count('post',\"mnenie=?\", array($data['errors']))>0)\n{\n	$errors[]='Такое уже было';\n}\n	\n	\n	if(empty($errors))\n		 {\n//регаем*/\n		$user=R::dispense('post');\n		$user->login = $_SESSION['logged_user']->login;\n		$user->mnenie = $data['mnenie'];\n		//$user->password = password_hash($data['password'], PASSWORD_DEFAULT);\n		R::store($user);\n\n		echo '<div style=\"color:green;\">'.'Зарегился!'.'<br>'.'перейдите на'. '<a href = \"/\">  Главную страницу</a></div><hr>'; /*\n}\n		{\n	echo '<div style=\"color:red;\">'.array_shift($errors).'</div><hr>';\n	var_dump($errors);021*\n		}\n*/\n		}\n?>\n\n<form action = \"/add.php\" method=\"POST\">\n\n<p>\n<p><strong>Ваше мнение</strong>:</p>\n<p><textarea rows=\"10\" cols=\"45\" name=\"mnenie\"  value=\"Ваше мнение очень важно для нас\" >Ваше мнение очень важно для нас </textarea>\n</p>\n\n\n<p>\n	<button class=\"btn btn-success-outline\" type=\"submit\"  name=\"do_add\"> Добавить мнение</button>\n\n</p>\n</form>\n\n\n",
 			"file": "add.php",
+			"file_size": 1464,
+			"file_write_time": 131591311156313096,
 			"settings":
 			{
-				"buffer_size": 1130,
+				"buffer_size": 1208,
 				"line_ending": "Windows"
 			}
 		},
@@ -103,9 +106,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"git:",
+				"Git: Gui"
+			],
+			[
+				"git:st",
+				"Git: Status"
+			],
+			[
+				"git: a",
+				"Git: Add All"
+			],
 			[
 				"git:q",
 				"Git: Quick Commit (repo, only already added files)"
@@ -113,10 +128,6 @@
 			[
 				"git:a",
 				"Git: Add All"
-			],
-			[
-				"git:",
-				"Git: Log All"
 			],
 			[
 				"git:pus",
@@ -203,7 +214,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 512.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -498,15 +509,15 @@
 					"file": "add.php",
 					"settings":
 					{
-						"buffer_size": 1130,
+						"buffer_size": 1208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1128,
-								1128
+								853,
+								853
 							]
 						],
 						"settings":
@@ -563,7 +574,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

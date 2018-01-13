@@ -14,6 +14,7 @@ require "libs.php";
 <?php else : ?>
 <a href ="/login.php">Авторизация!!!</a><br>
 <a href ="/signup.php">Регистрация</a><br>
+<a href = "text.php"> Ваши мнения </a><br>
     Вы не авторизованы!
 <?php endif; ?>
 
