@@ -9,7 +9,7 @@ $data =$_POST;
 $query = R::findAll('post');
     // а можно и так  $query = R::getAll( 'SELECT * FROM jobs' ); 
    // echo($query); ?>
-   //проверка! 2
+   //проверка! 2, а где 2 там и 3
 <table border="1" align="center">
     <tr>
         <td> id </td>
